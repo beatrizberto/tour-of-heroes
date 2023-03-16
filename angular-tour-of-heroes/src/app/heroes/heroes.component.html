@@ -1,0 +1,14 @@
+<h2>{{ selectedHero.name | uppercase }} Details</h2>
+
+<div><span>id: </span>{{ selectedHero.id }}</div>
+<div><span>name: </span>{{ selectedHero.name }}</div>
+
+<div class="edit">
+  <label for="name">Hero name:</label>
+  <input [(ngModel)]="selectedHero.name" id="name" placeholder="name" />
+</div>
+<ul>
+  <li [class.selected]="selectedHero == heroDaLista" *ngFor="let heroDaLista of heroes">
+   <a (click)="selecionarHeroi(heroDaLista)"> {{ heroDaLista.id }}. {{ heroDaLista.name }}</a>
+  </li>
+</ul>
