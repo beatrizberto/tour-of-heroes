@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero-model';
+import { HEROES } from '../mock-heroes';
 
 @Component({
   selector: 'app-heroes',
@@ -12,32 +13,13 @@ export class HeroesComponent implements OnInit {
     name: '',
   };
 
-  heroes: Hero[] = [
-    {
-      id: 1,
-      name: 'dynama',
-    },
+  heroes = HEROES;
 
-    {
-      id: 2,
-      name: 'batman',
-    },
-
-    {
-      id: 3,
-      name: 'windstorm',
-    },
-
-    {
-      id: 4,
-      name: 'miranha',
-    },
-  ];
   ngOnInit(): void {
     this.selectedHero = this.heroes[0];
   }
 
-  selecionarHeroi(heroDaLista: Hero) {
+  getHeroes(heroDaLista: Hero) {
     this.selectedHero = heroDaLista
   }
 }

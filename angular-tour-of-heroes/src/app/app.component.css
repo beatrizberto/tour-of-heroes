@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+.player {
+  display: block;
+
+}
+
+.centro {
+  display: flex;
+  flex-direction: row;
+  border: solid 2px black;
+  margin: 3px;
+  padding: 5px;
+}
+
+.selecionado {
+  border:solid 1px black;
+  margin: 1px;
+  padding: 3px;
+}
